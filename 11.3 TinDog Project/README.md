@@ -1,4 +1,6 @@
-# TinDog Project
+# TinDog Website
+
+To find Dogs near by
 
 HINT: To fiure out which Bootstrap components/snippets are used. Refer to the PDF below:
 https://github.com/appbrewery/tindog/blob/main/Bootstrap-snippets.pdf
