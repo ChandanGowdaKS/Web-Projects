@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script> 
+<script type="text/javascript" src="js/Myriad_Pro_italic_600.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_italic_400.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_400.font.js"></script>
+<style>
+    body {
+        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        min-height: 100vh;
+        margin: 0;
+    }
+    header {
+        background: #22223b;
+        padding: 30px 0 20px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    #logo {
+        font-size: 2.2rem;
+        color: #f2e9e4;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    #slogan {
+        color: #9a8c98;
+        font-size: 1.1rem;
+        margin-left: 10px;
+        font-style: italic;
+    }
+    #menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    #menu li {
+        display: inline-block;
+    }
+    #menu a {
+        display: inline-block;
+        padding: 10px 24px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #22223b;
+        background: #f2e9e4;
+        border-radius: 6px;
+        box-shadow: none;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        transition: background 0.2s, color 0.2s;
+    }
+    #menu a:hover, #menu_active a {
+        background: #e0eafc;
+        color: #22223b;
+        border-color: #9a8c98;
+        transform: none;
+    }
+    .it {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+    }
+    form {
+        background: #fff;
+        padding: 40px 32px 32px 32px;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(34,34,59,0.10);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        min-width: 350px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 14px;
+        font-size: 1.1rem;
+        border: 1.5px solid #9a8c98;
+        border-radius: 8px;
+        outline: none;
+        transition: border 0.2s;
+        margin: 0;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+        border-color: #22223b;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, #22223b 60%, #9a8c98 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(34,34,59,0.10);
+        transition: background 0.2s, transform 0.2s;
+        margin-top: 10px;
+    }
+    input[type="submit"]:hover {
+        background: linear-gradient(90deg, #9a8c98 0%, #22223b 100%);
+        transform: scale(1.04);
+    }
+</style>
+</head>
+<body id="page1">
+<div class="body1">
+	<div class="main">
+<!-- header -->
+		<header>
+			<div class="wrapper">
+				<h1>
+					<a href="" id="logo">Domestic Airlines</a>
+					<span id="slogan">Admin Portal</span>
+				</h1>
+				<div class="right">
+					<nav>
+						<ul id="menu">
+							<li id="menu_active"><a href="index_guest.html">Home</a></li>
+							<!-- Add more menu items here if needed -->
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+	</div>
+</div>
+	<div class="it">
+			<form action="admin_login/admin_login.php" method="POST">
+				<input type="text" name="name" placeholder="Admin name" required />
+				<input type="password" name="password" placeholder="Admin Password" required />
+				
+				<input type="submit" name="login" value="LOGIN" />
+			</form>
+	</div>
+	
+	<!-- / header -->
+<div class="main">
+	
+</div>
+<div class="body2">
+	<div class="main">
+	</div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
