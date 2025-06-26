@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Lovely Brother Saagu Anna!</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f1c40f;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Header with Confetti */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Confetti Animation */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            top: 0;
+            opacity: 0;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Chessboard Background Pattern */
+        .chess-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(45deg, #eee 25%, transparent 25%),
+                linear-gradient(-45deg, #eee 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #eee 75%),
+                linear-gradient(-45deg, transparent 75%, #eee 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Main Content Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 0.5rem auto;
+        }
+        
+        /* Chess Tournament Section */
+        .chess-section {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+        
+        .tournament-banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .tournament-banner:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Interactive Chessboard */
+        .chessboard-container {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+        
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 400px;
+            height: 400px;
+            border: 2px solid var(--dark);
+        }
+        
+        @media (max-width: 600px) {
+            .chessboard {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        
+        .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .square:hover {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+        
+        .light {
+            background-color: #f0d9b5;
+        }
+        
+        .dark {
+            background-color: #b58863;
+        }
+        
+        /* Sports Section */
+        .sports-section {
+            background-color: var(--light);
+        }
+        
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .sports-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .sports-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .sports-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .sports-card p {
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Memory Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        /* Personal Message Section */
+        .message-section {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .message-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .message-box h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .message-box p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .memory-highlight {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .memory-highlight img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1.5rem;
+        }
+        
+        #reveal-more {
+            background-color: var(--accent);
+            color: var(--dark);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        #reveal-more:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+        
+        #hidden-messages {
+            margin-top: 2rem;
+            text-align: left;
+            padding: 1.5rem;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .heart {
+            color: var(--secondary);
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chess-pattern"></div>
+    
+    <header>
+        <h1>Happy Birthday My Lovely Brother Saagu Anna!</h1>
+        <p class="subtitle">Celebrating an amazing brother, chess player, sports enthusiast, Orchids Head Coach,
+            Upcoming orchids Owner </p>
+        
+        <!-- Confetti will be added by JavaScript -->
+    </header>
+    
+    <section class="chess-section">
+        <h2 class="section-title">My Saagu Chess Journey</h2>
+        
+        <img src="./WhatsApp Image 2025-06-14 at 5.54.33 PM.jpeg" alt="Chess Tournament" class="tournament-banner">
+        <img src="./IMG-20240118-WA0006.jpg" alt="BMS Chess Tournament" class="tournament-banner">
+        <img src="IMG-20231223-WA0009.jpg" alt="LNDTRICK Chess Tournament" class="tournament-banner">
+        
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
+            The First Position u invented.
+        </p>
+        
+        <div class="chessboard-container">
+            <div class="chessboard" id="chessboard">
+                <!-- Chessboard squares will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <section class="sports-section">
+        <h2 class="section-title">Best Memories</h2>
+        
+        <div class="sports-grid">
+            <div class="sports-card">
+                <img src="IMG-20240112-WA0019.jpg" alt="Sports Tournament">
+                <p>His passion for sports </p>
+            </div>
+            <div class="sports-card">
+                <img src="IMG-20241219-WA0013.jpg" alt="Cheerbreak">
+                <p>Best Memories</p>
+            </div>
+            <div class="sports-card">
+                <img src="IMG20230829100545.jpg" alt="Sports Event">
+                <p>Joker Movement,Love Towards Country</p>
+            </div>
+            <div class="sports-card">
+                <img src="./IMG-20230705-WA0005.jpg" alt="Sports Event">
+                <p>One More Great,Lovely Brother</p>
+            </div>
+            <div class="sports-card">
+                <img src="./IMG20241108152433.jpg" alt="Sports Event">
+                <p>Sweet Heart Brother</p>
+            </div>
+            <div class="sports-card">
+                <img src="./IMG-20241221-WA0037.jpg" alt="Sports Event">
+                <p>Big Joker Paandu</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="section-title">Memories</h2>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="IMG20230829155456.jpg" alt="Memory">
+                <div class="gallery-caption">Special moments</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG20230829165552.jpg" alt="Memory">
+                <div class="gallery-caption">Location Doesn't Matter Sleepy guy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG20231001062835.jpg" alt="Memory">
+                <div class="gallery-caption">Location Doesn't Matter Sleepy guy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG20240214174130.jpg" alt="Memory">
+                <div class="gallery-caption">Focused on chess😅, Nooo Busy with his L-ve</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG-20231126-WA0003.jpg" alt="Memory">
+                <div class="gallery-caption">Seminar Time</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG-20230830-WA0012.jpg" alt="Memory">
+                <div class="gallery-caption">Sports events</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./IMG-20230528-WA0001.jpg" alt="Memory">
+                <div class="gallery-caption">Arbiting</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./IMG-20240111-WA0018.jpg" alt="Memory">
+                <div class="gallery-caption">No Comments</div>
+            </div>
+            <div class="gallery-item">
+                <img src="./IMG-20240830-WA0001.jpg" alt="Memory">
+                <div class="gallery-caption">Relay Torch</div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG-20231223-WA0007.jpg" alt="Memory">
+                <div class="gallery-caption">BMS events</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="message-section">
+        <h2 class="section-title">To My Amazing Brother</h2>
+        
+        <div class="message-box">
+            <h2>Dear Saagu,</h2>
+            <p>On your special day, I want you to know how much you mean to me. You're not just my brother - you're my mentor, my Guider, and my friend etc etc.</p>
+            
+            <div class="memory-highlight">
+                <img src="IMG-20231223-WA0007.jpg" alt="Chess Tournament">
+                <div>
+                    <p>Remember when you Became Chief Arbiter for BMS Chess Tournament? Your dedication and strategic mind showed me what true passion looks like. I'm so proud of all you've accomplished.
+                        and the Stress you took to make the tournament a success.</p>
+                    </p>
+                </div>
+            </div>
+            
+            <p> Saagu,Dhanu,Viji Anna,Paandu No one Can Replace you Guys, Thanks a lot all of u have given me  unforgettable memories... Miss You all</p>
+            
+            <button id="reveal-more">Click for more reasons I admire you</button>
+            
+            <div id="hidden-messages">
+                <p>Goobe Anna There is Nothing to Say,.</p>
+                <p>Once Again Happy Birthday Yaavag Sigtya Helu</p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p> <span class="heart">♥</span> Meet You Soon </p>
+        <p>Once again Happy Birthday My lovely Sagar Anna!</p>
+    </footer>
+
+    <script>
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#f1c40f', '#e74c3c', '#3498db', '#2ecc71', '#9b59b6'];
+            const header = document.querySelector('header');
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animation = `confetti-fall ${Math.random() * 3 + 2}s linear forwards`;
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                header.appendChild(confetti);
+            }
+        }
+        
+        // Create chessboard
+        function createChessboard() {
+            const chessboard = document.getElementById('chessboard');
+            const letters = ['♔', '♕', '♖', '♗', '♘', '♙', '♚', '♛', '♜', '♝', '♞', '♟'];
+            const messages = [
+                "Happy Birthday!",
+                "Best Brother!",
+                "Chess Champion!",
+                "We Love You!",
+                "Amazing Nick!",
+                "Family Pride!",
+                "Sports Star!",
+                "Kind Heart!"
+            ];
+            
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const square = document.createElement('div');
+                    square.className = `square ${(row + col) % 2 === 0 ? 'light' : 'dark'}`;
+                    
+                    // Occasionally add a chess piece
+                    if (Math.random() > 0.7) {
+                        square.textContent = letters[Math.floor(Math.random() * letters.length)];
+                    }
+                    
+                    // Add click event to show messages
+                    square.addEventListener('click', () => {
+                        if (!square.dataset.clicked) {
+                            square.textContent = messages[Math.floor(Math.random() * messages.length)];
+                            square.style.fontSize = '0.8rem';
+                            square.style.backgroundColor = 'rgba(231, 76, 60, 0.8)';
+                            square.style.color = 'white';
+                            square.dataset.clicked = true;
+                        }
+                    });
+                    
+                    chessboard.appendChild(square);
+                }
+            }
+        }
+        
+        // Toggle hidden messages
+        document.getElementById('reveal-more').addEventListener('click', function() {
+            const hiddenMessages = document.getElementById('hidden-messages');
+            if (hiddenMessages.style.display === 'none' || !hiddenMessages.style.display) {
+                hiddenMessages.style.display = 'block';
+                this.textContent = 'Hide Messages';
+            } else {
+                hiddenMessages.style.display = 'none';
+                this.textContent = 'Click for more reasons I admire you';
+            }
+        });
+        
+        // Initialize everything when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            createConfetti();
+            createChessboard();
+            document.getElementById('hidden-messages').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
