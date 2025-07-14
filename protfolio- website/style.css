@@ -17,17 +17,97 @@
     font-family:"Roboto Slab",serif;
 }
 .border{
-    box-shadow: 5px 5px 15px #b7c1da;
-    margin-bottom:1px;
+    box-shadow: 5px 5px 15px #d5f067;
+    margin-bottom:2px;
 }
 .name{
     display:flex;
     flex-direction:column;
-    height:100vh;
-    width: 800px;
-    align-items:center;
-    justify-content:center
+    line-height:2rem;
+    border-top:5px solid white;
+    padding:1.5rem;
+    /* animation: rotate 2s linear 1; */
 }
+@keyframes rotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.name h1{
+    font-family: "Permanent Marker", cursive;
+    width:43rem;
+    font-weight:bold;
+    
+}
+.name p {
+    font-family: "Rubik", sans-serif;
+    width: 37rem;
+    color:rgb(127, 237, 237);
+    font-size:large;
+}
+.profile-pic img{
+    border-radius:50%;
+    height:28rem;
+    border:10px solid white;
+    /* animation: rotate 2s linear 1; */
+} 
 .contents{
+    display:flex;
     margin-left :80px;
+    height: 705px;
+    padding:5rem;
+    align-items:center;
+}
+.social-media i{
+    bottom:0;
+    font-size :25px;
+    margin-right:0.5rem;
+    opacity:0.7;
+    
+}
+.social-media i:hover{
+    opacity:1;
+    font-size: 1.75rem;
+}
+
+/* Skills */
+
+h1{
+    font-family: "Permanent Marker", cursive;
+    cursor:pointer;
+}
+h1:hover {
+    font-style:italic;
+    color:rgb(60, 205, 79);
+}
+.skills{
+    height:25rem;
+    /* flex: */
+}
+.skills h1{
+    border:5px solid #fff
+}
+.code i{
+    color:#fff;
+    opacity:0.8;
+}
+
+.web-skill i{
+    margin:2.5rem;
+    opacity: 0.8;
+    font-size:5rem;
+}
+/* .code i:hover {
+    color: #fff;
+    opacity: 1;
+    font-size:5.5rem;
+} */
+
+.web-skill i:hover{
+    color: rgb(60, 205, 79);
+    opacity: 1;
+    font-size: 5.5rem;
 }
