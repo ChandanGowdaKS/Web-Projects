@@ -1,0 +1,33 @@
+*{
+    background-color:#061429;
+} 
+/* .header{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}  */
+.fs-4{
+    color: #fff;
+    font-family: Rubik, sans-serif;
+    font-weight:600;
+}
+.nav-pills{
+    display:flex;
+    /* justify-content:; */
+    font-family:"Roboto Slab",serif;
+}
+.border{
+    box-shadow: 5px 5px 15px #b7c1da;
+    margin-bottom:1px;
+}
+.name{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width: 800px;
+    align-items:center;
+    justify-content:center
+}
+.contents{
+    margin-left :80px;
+}
