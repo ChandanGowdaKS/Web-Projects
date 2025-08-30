@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Michroma&family=Outfit:wght@100..900&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_container">
+            <h2>  <i class="fa-solid fa-heart"></i> Love Calculator <i class="fa-solid fa-heart"></i></h2>
+        <div class="sub_container"></div>
+            <label for="yourname">Your Name</label>
+            <input type="text" id="yourname" placeholder = "Enter Your name">
+            <label for ="partnername">Partner's Name</label>
+            <input type="text" id="partnername" placeholder = "Enter Your Partner's name">
+            <br>
+            <button onclick="calculatelove()">Calculate</button>
+            <div id="result">Love Percentage between both of you:</div>
+        </div>
+    </div>
+    <script src = "./app.js"></script>
+</body>
+</html>
