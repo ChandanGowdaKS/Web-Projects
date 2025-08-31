@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel ="stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Michroma&family=Outfit:wght@100..900&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&family=Story+Script&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main_container">
+        <h2>BMI Calculator</h2>
+        <form onsubmit="CalculateBMI(); return false;">
+        <section>
+            <label for="Gender">Gender:</label>
+            <select id="Gender" class="input" required>
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+        </section>
+        <section>
+            <label for="Age">Age:</label>
+            <input type="number" id="Age" placeholder="Enter your age" required>
+        </section>
+        <section>
+            <label for="Height">Height:</label>
+            <input type="number" id="Height" placeholder="Feet" required>
+            <input type="number" id="Height2" placeholder="Inches" required>
+        </section>
+        <section>
+            <label for="Weight">Weight:</label>
+            <input type="number" id="Weight" placeholder="Enter your Weight" required>
+        </section>
+        <button type="submit">Calculate BMI</button>
+        <section>
+            <h4 id="result">Ready to check Your Body Mass Index <i class="fa-regular fa-face-smile"></i></h4>
+        </section>
+        </form>
+    </div>
+    <script src = "app.js"></script>
+</body>
+</html>
