@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Michroma&family=Outfit:wght@100..900&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&family=Story+Script&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main_container">
+        <h2>Loan Calculator</h2>
+        <form id = "Loan_form">
+            <label for = "Loan-amount">Loan Amount</label>
+            <input type = "number" id ="Loan-amount" required placeholder = "Enter Loan Amount">
+
+            <label for = "Interest">Interest Rate(%)</label>
+            <input type = "number" id = "Interest" required placeholder = "Enter Interest Rate">
+
+            <label for = "Loan-Term">Loan Term (in Months)</label>
+            <input type = "number" id = "Loan-Term" required placeholder = "Enter Loan Term">
+
+            <input type = "submit" value = "Calculate" id = "Calculate-button">
+        </form>
+        <h4 id = "result"></h4>
+    </div>
+    <!-- <p>&#128153 Built by Chandan Gowda &#128153 </p> -->
+    <script src = "app.js"> </script>
+</body>
+</html>
