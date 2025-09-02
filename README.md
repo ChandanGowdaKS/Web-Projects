@@ -10,4 +10,5 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(722).png)
 # 4. Loan Calculator (https://loan-calculator-chandu.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(726).png)
-
+# 5. Counter Application (https://countercountingapplication.netlify.app/)
+   ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(727).png)
