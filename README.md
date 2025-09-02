@@ -8,5 +8,6 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(718).png)
 # 3. BMI Calculator (https://bodymassindexweb.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(722).png)
-
+# 4. Loan Calculator (https://loan-calculator-chandu.netlify.app/)
+   ![Project Screenshot] (https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(726).pn)
 
