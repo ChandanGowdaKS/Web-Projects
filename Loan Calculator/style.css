@@ -9,6 +9,7 @@ body{
     align-items:center;
     /* width: 400 px; */
     height: 100vh;
+    background-color:aqua
 
 }
 h2{
@@ -16,15 +17,18 @@ h2{
     text-align:center;
     margin:0;
     margin-bottom:10px;
+    color: blue
 
 }
-h2:hover{
-    color:blue
+h5{
+    text-align:center
 }
+
 .main_container{
     border: 3px solid black;
     border-radius: 10px;
-    padding: 20px
+    padding: 20px;
+    background-color:#fff;
 }
 p{
     font-size:xx-small;
