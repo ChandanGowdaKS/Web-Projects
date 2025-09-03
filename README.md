@@ -12,3 +12,5 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(726).png)
 # 5. Counter Application (https://countercountingapplication.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(727).png)
+# 6. Palindrome Checker (https://palindromecheckerapplication.netlify.app/)
+   ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(729).png)
