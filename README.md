@@ -14,3 +14,5 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(727).png)
 # 6. Palindrome Checker (https://palindromecheckerapplication.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(729).png)
+# 7. RGB Color Generator (https://rgbcolorgeneratorapp.netlify.app/)
+   ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(737).png)
