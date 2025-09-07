@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Michroma&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&family=Story+Script&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="main_container">
+        <h2>Tip Calculator <i class="fa-brands fa-angellist"></i></h2>
+        <hr>
+        <section id = "details">
+            <label for = "Bill_amount">Bill Amount:</label>
+            <input type = "number" id = "Bill_amount" placeholder = "Enter the Bill Amount">
+
+            <label for = "Service">Service Rating:</label>
+            <select id = "Service">
+                <option value = 1>Poor</option>
+                <option value=2>Average</option>
+                <option value = 3>Good</option>
+                <option value = 4>Excellent</option>
+            </select>
+            <label for = "people">Number of People:</label>
+            <input type = "number" id = "people" placeholder = "Enter number of people">
+
+            <label for = "Meal_type">Meal Type:</label>
+            <select id = "Meal_type">
+                <option value = "Breakfast">Breakfast</option>
+                <option value = "Lunch">Lunch</option>
+                <option value = "Dinner">Dinner</option>
+            </select>
+        </section>
+        <hr>
+        <div class="result">
+            <h4>Result:</h4>
+            <p id = "answer"></p>
+            <button id = "calculate" onclick ="Calculate_amount()">Calculate</button>
+        </div>
+    </div>
+    <h6>&#128155 Built by Chandan Gowda &#128155 </h6>
+    <section id = "connect">
+    <p>Connect with me:</p>
+    <p><a href = "https://www.linkedin.com/in/chandan-gowda-k-s/"><i class="fa-brands fa-square-linkedin"></a></i>
+        <a href = "https://github.com/ChandanGowdaKS"> <i class="fa-brands fa-square-github"></i></a></p>
+    </section>
+    <script src = "app.js"></script>
+</body>
+</html>
