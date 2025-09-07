@@ -16,3 +16,5 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(729).png)
 # 7. RGB Color Generator (https://rgbcolorgeneratorapp.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(737).png)
+# 8. Tip Calculator App (https://tipcalculatorapplication.netlify.app/)
+   ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(741).png)
