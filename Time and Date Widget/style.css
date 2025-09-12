@@ -6,7 +6,7 @@ body{
     justify-content:center;
     align-items:center;
     color:#fff;
-    height:100vh;
+    height:100dvh;
 }
 
 .main_container{
@@ -16,6 +16,7 @@ body{
     grid-template-columns:8fr 4fr;
     align-items:center;
     border-radius:0.2em;
+    
     animation:glow 1.5s ease-in-out infinite alternate;
 }
 .clock_container{
@@ -66,4 +67,34 @@ body{
     font-size:2rem;
     padding:0;
     margin:0;
-} 
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    .main_container {
+        width: 95vw;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        border-radius: 0.5em;
+        padding: 1em 0.5em;
+    }
+    .clock_container {
+        font-size: 2em;
+        margin-left: 0;
+        padding: 0.5em 0;
+    }
+    .clock_container span {
+        width: 2.5em;
+        font-size: 1.2em;
+    }
+    .date_container span {
+        font-size: 1.2em;
+    }
+    .date_container p {
+        font-size: 1em;
+    }
+    body {
+        height: 100dvh;
+        padding: 0.5em;
+    }
+}
