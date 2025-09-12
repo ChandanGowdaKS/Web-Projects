@@ -18,3 +18,5 @@ Creating a web, like cloning websites to learn.
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(737).png)
 # 8. Tip Calculator App (https://tipcalculatorapplication.netlify.app/)
    ![Project Screenshot](https://github.com/ChandanGowdaKS/Web-Projects/blob/main/Images/Screenshot%20(741).png)
+# 9. Time and Date Widget App (https://realtimerapp.netlify.app/)
+   ![Project Screenshot](./Images/Screenshot%20(749).png)
